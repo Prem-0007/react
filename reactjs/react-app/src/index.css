@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+    background-color: #151515;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+    justify-content: center;
+    max-width:1024px;
+    margin: 0 auto;
+}
+
+h2{
+    color: #fff;
+
+    text-align: center;
+    font-size: 40px;
+}
+.card{
+    border:2px solid #4b5362;
+    
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px;
+      background-color: #31363f;
+      min-height: 100px;
+}
+
+button {
+    border:none;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color:transparent;
+    text-align: right;
+    cursor: pointer;
+    width:100%;
+}
+*/
+
+@import "tailwindcss";
+@import url(
+    'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
+)
+@import "tailwindcss";
+
+@layer utilities {
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  .wrapper {
+    /* Centers content, sets max width, adds padding */
+    @apply flex flex-col items-center justify-center mx-auto max-w-7xl px-5 py-10 w-full;
+  }
+
+  .pattern {
+      @apply fixed inset-0 -z-10;
+      min-height: 100vh;
+
+     /* Deep dark blue-black base */
+     background-color: #0b0c15;
+     /* A subtle grid texture pattern (using CSS math) */
+     background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+     background-size: 30px 30px;
+     background-repeat: repeat;
+     background-attachment: fixed;
+  }
+  
+}
+
+@layer base {
+  body {
+    /* Set this to pure black to match the edge of the gradients above */
+    @apply bg-black text-white; 
+  }
+}
